@@ -1,12 +1,10 @@
 /**
- * About dialog component that provides information about the application.
- * Features:
- * - Responsive dialog/drawer based on screen size
- * - Project description
- * - Preview image with loading state
- * - External links
+ * About dialog component — SyncPad branded.
+ * Replaces all "CodeX" references with "SyncPad".
+ * All functionality kept identical to the original.
  *
  * By Dulapah Vibulsanti (https://dulapahv.dev)
+ * Updated branding by Manpreet Singh
  */
 
 import Image from "next/image";
@@ -63,11 +61,7 @@ const AboutDialog = forwardRef<AboutDialogRef, AboutDialogProps>(
     const openDialog = useCallback(() => setIsOpen(true), []);
     const closeDialog = useCallback(() => setIsOpen(false), []);
 
-    // Expose openDialog and closeDialog to the parent component
-    useImperativeHandle(ref, () => ({
-      openDialog,
-      closeDialog,
-    }));
+    useImperativeHandle(ref, () => ({ openDialog, closeDialog }));
 
     useEffect(() => {
       if (isOpen) {
@@ -81,23 +75,28 @@ const AboutDialog = forwardRef<AboutDialogRef, AboutDialogProps>(
 
     if (isDesktop) {
       return (
-        <Dialog aria-label="About CodeX" onOpenChange={setIsOpen} open={isOpen}>
+        <Dialog
+          aria-label={`About ${SITE_NAME}`}
+          onOpenChange={setIsOpen}
+          open={isOpen}
+        >
           <DialogContent className={cn("max-w-2xl", forceDark && "dark")}>
             <DialogHeader className="text-left text-foreground">
               <DialogTitle>{SITE_NAME}</DialogTitle>
               <DialogDescription className="pt-2 text-base">
-                This project is part of the course &quot;COMPSCI4025P Level 4
-                Individual Project&quot; at the University of Glasgow.
+                A real-time collaborative code editor built as part of the
+                course &quot;COMPSCI4025P Level 4 Individual Project&quot; at
+                the University of Glasgow. No sign-up required.
               </DialogDescription>
             </DialogHeader>
 
             <div
-              aria-label="SyncPadapplication preview"
+              aria-label={`${SITE_NAME} application preview`}
               className="relative aspect-[600/315]"
               role="img"
             >
               <Image
-                alt="SyncPadapplication interface preview"
+                alt={`${SITE_NAME} application interface preview`}
                 aria-hidden={!isImgLoaded}
                 className="absolute rounded-md object-cover"
                 fill
@@ -119,7 +118,15 @@ const AboutDialog = forwardRef<AboutDialogRef, AboutDialogProps>(
 
             <div className="space-y-2 text-foreground">
               <p className="text-center">
-                Made with 💕 by <span className="font-medium">dulapahv</span>
+                Made with 💜 by{" "}
+                <a
+                  className="font-semibold underline underline-offset-2 transition-colors hover:text-indigo-400"
+                  href="https://github.com/Manpreets59"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Manpreet Singh
+                </a>
               </p>
               <nav
                 aria-label="External links"
@@ -142,24 +149,29 @@ const AboutDialog = forwardRef<AboutDialogRef, AboutDialogProps>(
     }
 
     return (
-      <Drawer aria-label="About CodeX" onOpenChange={setIsOpen} open={isOpen}>
+      <Drawer
+        aria-label={`About ${SITE_NAME}`}
+        onOpenChange={setIsOpen}
+        open={isOpen}
+      >
         <DrawerContent>
           <DrawerHeader>
             <DrawerTitle className="text-left">{SITE_NAME}</DrawerTitle>
             <DrawerDescription className="pt-2 text-left text-base">
-              This project is part of the course &quot;COMPSCI4025P Level 4
-              Individual Project&quot; at the University of Glasgow.
+              A real-time collaborative code editor built as part of the course
+              &quot;COMPSCI4025P Level 4 Individual Project&quot; at the
+              University of Glasgow. No sign-up required.
             </DrawerDescription>
           </DrawerHeader>
 
           <div
-            aria-label="SyncPadapplication preview"
+            aria-label={`${SITE_NAME} application preview`}
             className="w-full px-4"
             role="img"
           >
             <div className="relative aspect-[600/315] w-full max-w-full">
               <Image
-                alt="SyncPadapplication interface preview"
+                alt={`${SITE_NAME} application interface preview`}
                 aria-hidden={!isImgLoaded}
                 className="rounded-md object-cover"
                 fill
@@ -184,7 +196,15 @@ const AboutDialog = forwardRef<AboutDialogRef, AboutDialogProps>(
 
           <div className="mx-4 space-y-2">
             <p className="text-center">
-              Made with 💕 by <span className="font-medium">dulapahv</span>
+              Made with 💜 by{" "}
+              <a
+                className="font-semibold underline underline-offset-2 transition-colors hover:text-indigo-400"
+                href="https://github.com/Manpreets59"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Manpreet Singh
+              </a>
             </p>
             <nav aria-label="External links" className="grid grid-cols-2 gap-2">
               <ExternalLink forceDark={forceDark} />
@@ -204,6 +224,6 @@ const AboutDialog = forwardRef<AboutDialogRef, AboutDialogProps>(
   }
 );
 
-AboutDialog.displayName = "OpenPromptDialog";
+AboutDialog.displayName = "AboutDialog";
 
 export { AboutDialog, type AboutDialogRef };

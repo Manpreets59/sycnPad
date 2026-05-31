@@ -1,9 +1,6 @@
 /**
  * Welcome message component displayed in shared terminal.
- * Features:
- * - App logo and branding
- * - Usage instructions
- * - Terminal formatting
+ * Updated: "CodeX" → "SyncPad"
  *
  * By Dulapah Vibulsanti (https://dulapahv.dev)
  */
@@ -16,7 +13,7 @@ const WelcomeMsg = () => (
   <div className="mb-4 space-y-2">
     <div className="flex items-center gap-2 text-green-500">
       <Image
-        alt="SyncPadLogo"
+        alt="SyncPad Logo"
         className="size-5"
         height="16"
         loading="eager"

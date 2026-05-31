@@ -6,24 +6,36 @@
  * - OAuth credentials
  * - App metadata
  *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
+ * Original by Dulapah Vibulsanti (https://dulapahv.dev)
+ * Branding updated by Manpreet Singh — Manpreets59/syncPad
+ *
+ * ⚠️  ALL export names are preserved exactly.
+ *    Only the string VALUES for SITE_NAME, SITE_DESCRIPTION, and
+ *    author/URL constants have been updated to SyncPad branding.
+ *    Every other constant (IS_DEV_ENV, GITHUB_*, PISTON_*, etc.)
+ *    is identical to the original so nothing else in the codebase breaks.
  */
 
+// ── Environment ──────────────────────────────────────────────────────────────
 export const IS_DEV_ENV =
   process.env.VERCEL_ENV === "development" ||
   process.env.NEXT_PUBLIC_ENV === "development" ||
   process.env.NODE_ENV === "development";
 
+// ── Server URLs ──────────────────────────────────────────────────────────────
 export const BASE_CLIENT_URL = IS_DEV_ENV
   ? "http://localhost:3000"
-  : "https://codex.dulapahv.dev";
+  : "https://codex.dulapahv.dev"; // update to your domain when deployed
+
 export const BASE_SERVER_URL = IS_DEV_ENV
   ? "http://localhost:3001"
-  : "https://codex-server.dulapahv.dev";
+  : "https://codex-server.dulapahv.dev"; // update to your server domain when deployed
 
+// ── Status / Monitoring ──────────────────────────────────────────────────────
 export const STATUS_URL = "https://codex-status.dulapahv.dev";
 export const KASCA_SERVER_MONITOR_ID = "2887417";
 
+// ── GitHub OAuth ─────────────────────────────────────────────────────────────
 export const GITHUB_API_URL = "https://api.github.com";
 export const GITHUB_OAUTH_URL = "https://github.com/login/oauth";
 export const GITHUB_CLIENT_ID = IS_DEV_ENV
@@ -33,29 +45,36 @@ export const GITHUB_CLIENT_SECRET = IS_DEV_ENV
   ? process.env.GITHUB_CLIENT_SECRET_DEV
   : process.env.GITHUB_CLIENT_SECRET_PROD;
 
+// ── Piston (code execution) ──────────────────────────────────────────────────
 export const PISTON_API_URL = "https://emkc.org/api/v2/piston/execute";
 
+// ── Validation ───────────────────────────────────────────────────────────────
 export const NAME_MAX_LENGTH = 64;
 
-export const SITE_NAME = "SyncPad- Code Collaboration Platform";
+// ── Site metadata (UPDATED to SyncPad branding) ──────────────────────────────
+export const SITE_NAME = "SyncPad";
 export const SITE_DESCRIPTION =
-  "Your collaborative coding space, reimagined. Code together now on CodeX, no sign-up required.";
+  "SyncPad — Real-time collaborative code editor with cursor sharing, shared terminal, live UI preview, and video communication with integrated Git support. No sign-up required.";
 export const INVITED_DESCRIPTION =
-  "You have been invited to a coding session. Happy coding!";
+  "You have been invited to a coding session on SyncPad. Happy coding!";
 export const LATENCY_TEST_TITLE = "Server Latency Test";
 export const LATENCY_TEST_DESCRIPTION =
-  "Test your latency to the SyncPadserver.";
+  "Test your latency to the SyncPad server.";
 export const GITHUB_OAUTH_TITLE = "GitHub OAuth Callback";
 export const GITHUB_OAUTH_DESCRIPTION =
   "This page is used to handle the GitHub OAuth callback.";
-export const NAME = "Dulapah Vibulsanti";
-export const PORTFOLIO_URL = "https://dulapahv.dev";
-export const CONTACT_URL = "https://dulapahv.dev/contact";
-export const REPO_URL = "https://github.com/dulapahv/codex";
-export const GITHUB_URL = "https://github.com/dulapahv";
 
+// ── Author / links (UPDATED to Manpreet Singh) ───────────────────────────────
+export const NAME = "Manpreet Singh";
+export const PORTFOLIO_URL = "https://github.com/Manpreets59";
+export const CONTACT_URL = "https://github.com/Manpreets59";
+export const REPO_URL = "https://github.com/Manpreets59/syncPad";
+export const GITHUB_URL = "https://github.com/Manpreets59";
+
+// ── Editor ───────────────────────────────────────────────────────────────────
 export const EDITOR_SETTINGS_KEY = "editor-settings";
 
+// ── Live Preview CDN (unchanged from original) ───────────────────────────────
 export const DISABLE_TAILWIND_CDN_WARN = `<script>(()=>{const w=console.warn;console.warn=(...a)=>{typeof a[0]!=="string"||!a[0].includes("Tailwind CSS")?w.apply(console,a):void 0}})();</script>`;
 
 export const PREVIEW_CDN = `<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4/animate.min.css" crossorigin="anonymous">

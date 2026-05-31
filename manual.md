@@ -1,6 +1,6 @@
-# SyncPadUser Manual
+# CodeX User Manual
 
-- [SyncPadUser Manual](#codex-user-manual)
+- [CodeX User Manual](#codex-user-manual)
   - [Getting Started](#getting-started)
     - [Accessing CodeX](#accessing-codex)
     - [Creating a Room](#creating-a-room)
@@ -83,7 +83,7 @@
 
 ### Accessing CodeX
 
-SyncPadis a web-based application that requires no installation. To access CodeX:
+CodeX is a web-based application that requires no installation. To access CodeX:
 
 1. Open your web browser
 2. Navigate to [https://codex.dulapahv.dev/](https://codex.dulapahv.dev/).
@@ -229,7 +229,7 @@ The interface is divided into several sections, each section contains multiple p
 
 ## Room Sharing
 
-SyncPadallows you to share your room with others using multiple methods:
+CodeX allows you to share your room with others using multiple methods:
 
 <div align="center">
   <img src="docs/images/share-button.png" alt="Share Room Button" width="200"/>
@@ -375,7 +375,7 @@ At the upper right corner of the terminal panel, you can [Download Output](#down
 
 File name will be `codex-terminal-<date>--<time>.txt`, for example `codex-terminal-06-01-2025--17-37-28.txt`
 
-- Terminal output will not contain SyncPadwelcome message
+- Terminal output will not contain CodeX welcome message
 - Example output file:
 
     ```txt
@@ -392,11 +392,11 @@ File name will be `codex-terminal-<date>--<time>.txt`, for example `codex-termin
 
 ## GitHub Integration
 
-SyncPadallows you to connect your GitHub account to open and save files directly from your repositories.
+CodeX allows you to connect your GitHub account to open and save files directly from your repositories.
 
 ### Authentication
 
-SyncPadrequires `repo` access scope to read and write to your repositories. For more information, refer to the [GitHub Access Permissions](#github-access-permissions) section.
+CodeX requires `repo` access scope to read and write to your repositories. For more information, refer to the [GitHub Access Permissions](#github-access-permissions) section.
 
 To connect your GitHub account:
 
@@ -441,7 +441,7 @@ To disconnect your GitHub account:
   <img src="docs/images/open-from-github.png" alt="Open from Github" width="400"/>
 </div>
 
-SyncPadwill automatically detect the language of the file and switch the editor's language mode accordingly. Other users' editors will also automatically switch to the same language mode.
+CodeX will automatically detect the language of the file and switch the editor's language mode accordingly. Other users' editors will also automatically switch to the same language mode.
 
 ### Saving Files to GitHub
 
@@ -706,9 +706,9 @@ For a list of supported file formats, refer to the [Notepad Features](#notepad-f
 
 ## Video & Voice Communication
 
-SyncPadsupports video and voice communication between participants in a room. You can toggle your camera, microphone, and audio settings in the Video & Voice Communication panel.
+CodeX supports video and voice communication between participants in a room. You can toggle your camera, microphone, and audio settings in the Video & Voice Communication panel.
 
-Upon joining the room, SyncPadwill prompt you to grant permissions to access your media devices (camera, microphone, audio).
+Upon joining the room, CodeX will prompt you to grant permissions to access your media devices (camera, microphone, audio).
 
 <div align="center">
   <img src="docs/images/video-voice-communication.png" alt="Video & Voice Communication" width="200"/>
@@ -928,7 +928,7 @@ Live Preview and Code Execution will run code in a sandboxed environment to prev
 
 ### Data Handling
 
-SyncPaddoes not store any user data on the server except for:
+CodeX does not store any user data on the server except for:
 
 - Display names
 - User IDs
@@ -942,7 +942,7 @@ All of which are stored temporarily during a session and is cleared once the ses
 
 When using CodeX, your data is encrypted in transit using HTTPS and stored securely on the server. However, it is recommended to avoid sharing sensitive information on the platform.
 
-SyncPaduses [Vercel Analytics](https://vercel.com/docs/analytics) and [Cloudflare Web Analytics](https://developers.cloudflare.com/web-analytics/) to collect anonymous usage data for improving the platform including:
+CodeX uses [Vercel Analytics](https://vercel.com/docs/analytics) and [Cloudflare Web Analytics](https://developers.cloudflare.com/web-analytics/) to collect anonymous usage data for improving the platform including:
 
 - Country of origin
 - Browser type
@@ -954,19 +954,19 @@ No personal data is collected or stored.
 
 \*Page views is collected from users who visit the homepage only so other pages (e.g. session page with room ID) are neither tracked nor exposed.
 
-SyncPaduses [Sentry](https://sentry.io) for error tracking to help identify and fix issues quickly. No personal data is collected or stored. The [Sentry's Session Replay](https://docs.sentry.io/product/explore/session-replay/) feature is enabled for faster debugging, and **all user inputs are masked** to prevent data exposure. Learn more about [how Session Replay captures data while protecting user privacy](https://docs.sentry.io/security-legal-pii/scrubbing/protecting-user-privacy/).
+CodeX uses [Sentry](https://sentry.io) for error tracking to help identify and fix issues quickly. No personal data is collected or stored. The [Sentry's Session Replay](https://docs.sentry.io/product/explore/session-replay/) feature is enabled for faster debugging, and **all user inputs are masked** to prevent data exposure. Learn more about [how Session Replay captures data while protecting user privacy](https://docs.sentry.io/security-legal-pii/scrubbing/protecting-user-privacy/).
 
 ### GitHub Access Permissions
 
-SyncPaduses GitHub OAuth to authenticate users and access repositories. When you connect your GitHub account, SyncPadrequests only one permission scope:
+CodeX uses GitHub OAuth to authenticate users and access repositories. When you connect your GitHub account, CodeX requests only one permission scope:
 
 - `repo` - Grants full access to public and private repositories including read and write access to code, commit statuses, repository invitations, collaborators, deployment statuses, and repository webhooks. **Note**: In addition to repository related resources, the `repo` scope also grants access to manage organization-owned resources including projects, invitations, team memberships and webhooks. This scope also grants the ability to manage projects owned by users. (from [GitHub's Scopes for OAuth apps](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/scopes-for-oauth-apps))
 
-SyncPaddoes not store your GitHub access token. The token is stored securely in your browser's Cookies and is used only for making API requests to GitHub on your behalf.
+CodeX does not store your GitHub access token. The token is stored securely in your browser's Cookies and is used only for making API requests to GitHub on your behalf.
 
 To prevent unauthorized access to your GitHub account, the stored GitHub access token will expire after 7 days and you will need to reconnect your GitHub account to continue using the GitHub features.
 
-You can revoke access at any time by disconnecting your GitHub account from SyncPadby going to `Settings > Github Connection` and clicking `Disconnect`.
+You can revoke access at any time by disconnecting your GitHub account from CodeX by going to `Settings > Github Connection` and clicking `Disconnect`.
 
 Learn more about [GitHub's Scopes for OAuth apps](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/scopes-for-oauth-apps).
 

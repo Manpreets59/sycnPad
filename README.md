@@ -1,8 +1,8 @@
-# SyncPad- Code Collaboration Platform
+# CodeX - Code Collaboration Platform
 
 <div align="center">
   <a href="https://codex.dulapahv.dev/">
-    <img src="apps/client/public/images/cover.png" width="630" alt="SyncPadcover image"/>
+    <img src="apps/client/public/images/cover.png" width="630" alt="codex cover image"/>
   </a>
 </div>
 
@@ -19,7 +19,7 @@
 
 <br />
 
-**SyncPadis an online code collaboration platform that enables real-time coding, cursor sharing, live UI preview, and video communication with integrated Git support—no sign-up required.**
+**CodeX is an online code collaboration platform that enables real-time coding, cursor sharing, live UI preview, and video communication with integrated Git support—no sign-up required.**
 
 **✨ Try now at [codex.dulapahv.dev](https://codex.dulapahv.dev/)**
 
@@ -38,7 +38,7 @@ For detailed usage instructions and feature documentation, please see the **[Use
 
 ## Table of Contents
 
-- [SyncPad- Code Collaboration Platform](#codex---code-collaboration-platform)
+- [CodeX - Code Collaboration Platform](#codex---code-collaboration-platform)
   - [Features](#features)
   - [Table of Contents](#table-of-contents)
   - [Project Structure](#project-structure)

@@ -1,11 +1,9 @@
 /**
- * External link component that renders navigation buttons to portfolio, GitHub, etc.
- * Features:
- * - Link buttons with icons
- * - External URL handling
- * - Accessibility support
+ * External link component for the About dialog.
+ * Updated: links now point to Manpreet Singh / SyncPad repo.
  *
  * By Dulapah Vibulsanti (https://dulapahv.dev)
+ * Updated by Manpreet Singh
  */
 
 import { Send } from "lucide-react";
@@ -30,24 +28,41 @@ const ExternalLink = ({ forceDark = false }: ExternalLinkProps) => {
     <>
       <Button asChild size="sm" variant="outline">
         <a
-          aria-label="Visit portfolio website (opens in new tab)"
+          aria-label="Visit GitHub profile (opens in new tab)"
           href={PORTFOLIO_URL}
           rel="noopener noreferrer"
           target="_blank"
         >
           <Image
-            alt="Mirai logo"
+            alt="GitHub logo"
             className="mr-2"
             height={16}
-            src="/images/codex-logo.svg"
+            src={`/images/${resolvedTheme === "light" && !forceDark ? "octocat" : "octocat-white"}.svg`}
             width={16}
           />
-          My Portfolio
+          My GitHub
         </a>
       </Button>
       <Button asChild size="sm" variant="outline">
         <a
-          aria-label="Visit GitHub profile (opens in new tab)"
+          aria-label="Visit SyncPad GitHub repository (opens in new tab)"
+          href={REPO_URL}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <Image
+            alt="GitHub logo"
+            className="mr-2"
+            height={16}
+            src={`/images/${resolvedTheme === "light" && !forceDark ? "octocat" : "octocat-white"}.svg`}
+            width={16}
+          />
+          SyncPad Repo
+        </a>
+      </Button>
+      <Button asChild size="sm" variant="outline">
+        <a
+          aria-label="View GitHub profile (opens in new tab)"
           href={GITHUB_URL}
           rel="noopener noreferrer"
           target="_blank"
@@ -60,23 +75,6 @@ const ExternalLink = ({ forceDark = false }: ExternalLinkProps) => {
             width={16}
           />
           GitHub Profile
-        </a>
-      </Button>
-      <Button asChild size="sm" variant="outline">
-        <a
-          aria-label="Visit SyncPadGitHub repository (opens in new tab)"
-          href={REPO_URL}
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <Image
-            alt="GitHub logo"
-            className="mr-2"
-            height={16}
-            src={`/images/${resolvedTheme === "light" && !forceDark ? "octocat" : "octocat-white"}.svg`}
-            width={16}
-          />
-          SyncPadGitHub
         </a>
       </Button>
       <Button asChild size="sm" variant="outline">
