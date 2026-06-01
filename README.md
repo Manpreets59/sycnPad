@@ -1,7 +1,7 @@
 # CodeX - Code Collaboration Platform
 
 <div align="center">
-  <a href="https://codex.dulapahv.dev/">
+  <a href="https://github.com/Manpreets59/sycnPad">
     <img src="apps/client/public/images/cover.png" width="630" alt="codex cover image"/>
   </a>
 </div>
@@ -21,7 +21,7 @@
 
 **CodeX is an online code collaboration platform that enables real-time coding, cursor sharing, live UI preview, and video communication with integrated Git support—no sign-up required.**
 
-**✨ Try now at [codex.dulapahv.dev](https://codex.dulapahv.dev/)**
+**✨ Try now at [https://github.com/Manpreets59/sycnPad](https://github.com/Manpreets59/sycnPad)**
 
 > This project is part of the course "COMPSCI4025P Level 4 Individual Project" at the University of Glasgow.
 
@@ -105,7 +105,7 @@ After checking the [prerequisites](#prerequisites) above, follow these steps to 
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/dulapahv/CodeX.git
+   git clone https://github.com/Manpreets59/sycnPad
    cd CodeX
    ```
 
