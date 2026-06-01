@@ -62,7 +62,7 @@ For detailed usage instructions and feature documentation, please see the **[Use
 The project is organized as a [monorepo](https://en.wikipedia.org/wiki/Monorepo) using [Turborepo](https://turbo.build/repo/docs):
 
 ```txt
-CodeX
+SyncPad
 ├── apps/                   # Application packages
 │   ├── client/             # Frontend Next.js application
 │   │   ├── public/         # Static assets
